@@ -79,7 +79,7 @@ def main(root, text, menu_bar):
   object_edit.rightClick.add_command(label='Paste', command=object_edit.Paste)
   object_edit.rightClick.add_separator()
   object_edit.rightClick.add_command(label='Select All', command=object_edit.Select_All)
-  object_edit.rightClick.bind("<Control-q", object_edit.Select_All)
+  object_edit.rightClick.bind("<Control-q>", object_edit.Select_All)
 
   text.bind("Button-3", menu_bar)
   root.config(menu=menu_bar)

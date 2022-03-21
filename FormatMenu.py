@@ -99,13 +99,17 @@ def main(root, text, menu_bar):
   for option in font_option:
     font_sub_menu.add_command(label=option, command=lambda option=option: font.configure(family=option))
   
-  for value in range(1, 31):
+  for value in range(10, 49):
     size_sub_menu.add_command(label=str(value), command=lambda value=value: font.configure(size=value))
+
+  format_menu.add_cascade(label="Font Family", underline=0, menu=font_sub_menu)
+  format_menu.add_cascade(label="Font Size", underline=0, menu=size_sub_menu)
+  format_menu.add_separator()
 
   format_menu.add_command(label="Change Background Colour", command=object_format.ChangeBG)
   format_menu.add_command(label="Change Font Colour", command=object_format.ChangeFC)
-  format_menu.add_command(label="Font Family", underline=0, menu=font_sub_menu)
-  format_menu.add_command(label="Font Size", underline=0, menu=size_sub_menu)
+  format_menu.add_separator()
+
   format_menu.add_command(label="Bold", command=object_format.Bold, accelerator="Ctrl+B")
   format_menu.add_command(label="Italic", command=object_format.Italic, accelerator="Ctrl+I")
   format_menu.add_command(label="Underline", command=object_format.Underline, accelerator="Ctrl+U")
@@ -114,12 +118,13 @@ def main(root, text, menu_bar):
   menu_bar.add_cascade(label="Format", menu=format_menu)
 
   root.bind_all("<Control-b>", object_format.Bold)
-  root.bind_all("<Control-i>", object_format.italic)
+  root.bind_all("<Control-i>", object_format.Italic)
   root.bind_all("<Control-u>", object_format.Underline)
   root.bind_all("<Control-t>", object_format.Overstrike)
   root.grid_columnconfigure(0, weight=1)
-  root.resizeable(True, True)
+  root.resizable(True, True)
   root.config(menu=menu_bar)
+
 
 if __name__ == '__main__':
   print("This is not the correct main, run main.py.")

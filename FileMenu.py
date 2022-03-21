@@ -57,7 +57,7 @@ def main(root, text, menu_bar):
   file_menu.add_separator()
 
   file_menu.add_command(label='Quit', command=object_file.Quit)
-  menu_bar.add_cascade(label='File', mene=file_menu)
+  menu_bar.add_cascade(label='File', menu=file_menu)
   root.config(menu=menu_bar)
 
 
