@@ -3,6 +3,7 @@ from tkinter.simpledialog import *
 from tkinter.filedialog import *
 from tkinter.messagebox import *
 
+
 class Edit():
   def __init__(self, text, root):
     ''' A class to handle the editing methods of the
