@@ -60,6 +60,7 @@ def main(root, text, menu_bar):
   menu_bar.add_cascade(label='File', mene=file_menu)
   root.config(menu=menu_bar)
 
+
 if __name__ == "__main__":
-  print("Please run 'main.py'.")
+  print("This is not the correct main, run main.py.")
   

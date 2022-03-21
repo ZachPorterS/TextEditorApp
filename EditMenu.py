@@ -84,6 +84,7 @@ def main(root, text, menu_bar):
   text.bind("Button-3", menu_bar)
   root.config(menu=menu_bar)
 
+
 if __name__ == "__main__":
-  print("please run 'main.py'.")
+  print("This is not the correct main, run main.py.")
     
