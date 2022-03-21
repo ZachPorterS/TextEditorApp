@@ -48,4 +48,18 @@ class File():
   
 
 def main(root, text, menu_bar):
+  file_menu = Menu(menu_bar)
+  object_file = File(text, root)
+  file_menu.add_command(label='New', command=object_file.New_File)
+  file_menu.add_command(label='Open', command=object_file.Open_File)
+  file_menu.add_command(label='Save', command=object_file.Save_File)
+  file_menu.add_command(label='Save As...', command=object_file.Save_As)
+  file_menu.add_separator()
 
+  file_menu.add_command(label='Quit', command=object_file.Quit)
+  menu_bar.add_cascade(label='File', mene=file_menu)
+  root.config(menu=menu_bar)
+
+if __name__ == "__main__":
+  print("Please run 'main.py'.")
+  
