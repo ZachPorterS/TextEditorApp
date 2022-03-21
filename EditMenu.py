@@ -84,5 +84,5 @@ def main(root, text, menu_bar):
   root.config(menu=menu_bar)
 
 if __name__ == "__main__":
-  print("please run: 'main.py'.")
+  print("please run 'main.py'.")
     
